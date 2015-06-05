@@ -32,6 +32,20 @@ router.route('/text')
 		res.send(sayings[Math.floor(Math.random()*sayings.length)]);
 	});
 
+router.route('/images')
+	.get(function(req, res) {
+		var images = [
+			'https://aspoonfulofsuga.files.wordpress.com/2014/03/4b59915ecce0dee4bfa3f60680308695e4491ea42d23781bb3f10bd043621643.jpg?w=634',
+			'http://i.imgur.com/ewvJjBR.jpg',
+			'http://s2.quickmeme.com/img/e5/e59d1b66c3aa6c9bc9e4613b3fde1414d00e6da18c099b3bf5d3d9f8eaa4d26d.jpg',
+			'http://s2.quickmeme.com/img/85/85b30061ca28fd8f94ffac7aa195f661d354e7bf77c6985140413b068d72eb55.jpg',
+			'http://s2.quickmeme.com/img/b7/b71b8bb6a6d39a32854bcbe3dcdfd418994ab2a14ee6caa57cdb47732410a08c.jpg',
+			'https://s-media-cache-ak0.pinimg.com/736x/c2/57/a7/c257a74eeb191a75082b9671dc696093.jpg',
+			'http://img1.wikia.nocookie.net/__cb20140823230044/random-ness/images/6/6d/Hulk-hogan-pastamania.jpg'
+		]
+		res.send(images[Math.floor(Math.random()*images.length)]);
+	});
+
 router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api!' });
 });
