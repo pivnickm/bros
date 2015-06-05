@@ -1,0 +1,12 @@
+{
+	"name": "Bros",
+	"version": "0.1.0",
+	"description": "Tool to create fun",
+	"main": "server.js",
+	"private": true,
+	"dependencies": {
+		"express": "~4.0.0"
+	},
+	"devDependencies": {},
+	"author": "MP"
+}
